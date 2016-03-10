@@ -1,8 +1,7 @@
 FROM lukovkin/dockerfile-keras
 
-RUN source activate keras
-
-RUN conda install -y \
+RUN source activate keras \
+  && conda install -y \
     jupyter \
     matplotlib \
     seaborn
@@ -10,4 +9,5 @@ RUN conda install -y \
 VOLUME /notebook
 WORKDIR /notebook
 EXPOSE 8888
-CMD jupyter notebook --no-browser --ip=0.0.0.0
+CMD source activate keras \
+  && jupyter notebook --no-browser --ip=0.0.0.0
