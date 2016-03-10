@@ -1,4 +1,4 @@
-FROM lukovkin/keras
+FROM lukovkin/dockerfile-keras
 
 RUN conda install -y \
     jupyter \
