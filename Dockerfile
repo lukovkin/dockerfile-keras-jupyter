@@ -1,5 +1,7 @@
 FROM lukovkin/dockerfile-keras
 
+RUN source activate keras
+
 RUN conda install -y \
     jupyter \
     matplotlib \
