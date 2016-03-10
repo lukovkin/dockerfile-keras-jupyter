@@ -1,4 +1,4 @@
-FROM ermaker/keras
+FROM lukovkin/keras
 
 RUN conda install -y \
     jupyter \
